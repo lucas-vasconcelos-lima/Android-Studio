@@ -2,6 +2,7 @@ package com.example.myapplication3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity() {
         val rolagem = (1..lados).random()
         val textDado = findViewById<TextView>(R.id.textDado)
         textDado.text = rolagem.toString()
+
+
+
 
 
     }

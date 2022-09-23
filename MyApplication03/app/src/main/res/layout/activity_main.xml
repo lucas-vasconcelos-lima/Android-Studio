@@ -4,47 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF9800"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="163dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_baseline_bookmark_24" />
 
     <TextView
         android:id="@+id/textDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:textSize="20sp"
+        android:layout_marginTop="54dp"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         tools:text="1" />
 
     <Button
-        android:id="@+id/buttonD12"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonD18"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/d12"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0468ff"
+        android:text="Jogar!"
+        app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonD12" />
 
     <Button
         android:id="@+id/buttonD6"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/d6"
-        app:layout_constraintEnd_toStartOf="@+id/buttonD12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0468ff"
+        android:text="Jogar!"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/buttonD18"
+        android:id="@+id/buttonD12"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0468ff"
+        android:text="Jogar!"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonD6" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#0468FF"
+        android:backgroundTintMode="screen"
+        android:text="@string/sorteio_com_dados"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/d18"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonD12"
-        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="54dp"
+        android:text="Sorteio dado de 6 lados "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="Sorteio dado de 12 lados"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="Sorteio dado de 18 lados"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
