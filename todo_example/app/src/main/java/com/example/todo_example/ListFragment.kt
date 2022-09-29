@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.todo_example.adapter.TarefaAdapter
+import com.example.todo_example.databinding.FragmentListBinding
+import com.example.todo_example.model.Tarefa
 
 
 class ListFragment : Fragment() {
 
+    // classe só existe pq habilitamos
+    private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,19 +23,25 @@ class ListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        // trás o inflate para conseguir inflar
-        val view = inflater.inflate(R.layout.fragment_list, container, false)
-        // aqui joga ar para inflar
-        val floatingAdd = view.findViewById<FloatingActionButton>(R.id.floatingAdd)
-        // quando clicar navega para proxima tela
-        floatingAdd.setOnClickListener {
+        binding = FragmentListBinding.inflate(layoutInflater, container, false)
+
+
+
+        // Configuração do RecyclerView
+        val adapter = TarefaAdapter()
+        binding.recyclerTarefa.layoutManager = LinearLayoutManager(context)
+        binding.recyclerTarefa.adapter = adapter
+        binding.recyclerTarefa.setHasFixedSize(true)
+
+
+
+        binding.floatingAdd.setOnClickListener {
             // navController - controller de ações
             // navigate - ir até algum destino
             // destino
             findNavController().navigate(R.id.action_listFragment_to_formFragment)
         }
-
-        return view
+        return binding.root
     }
 
 }

@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Programas/Android/todo_example/app/src/main/res/layout/activity_main.xml" value="0.15896739130434784" />
-        <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Programas/Android/todo_example/app/src/main/res/layout/fragment_form.xml" value="0.5" />
+        <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Programas/Android/todo_example/app/src/main/res/layout/card_layout.xml" value="0.25" />
+        <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Programas/Android/todo_example/app/src/main/res/layout/fragment_form.xml" value="0.33" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Programas/Android/todo_example/app/src/main/res/layout/fragment_list.xml" value="0.209375" />
       </map>
     </option>
