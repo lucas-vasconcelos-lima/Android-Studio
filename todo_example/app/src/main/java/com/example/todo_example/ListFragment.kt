@@ -5,17 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todo_example.adapter.TarefaAdapter
 import com.example.todo_example.databinding.FragmentListBinding
-import com.example.todo_example.model.Tarefa
+import com.example.todo_example.util.MainViewModel
 
 
 class ListFragment : Fragment() {
 
     // classe só existe pq habilitamos
     private lateinit var binding: FragmentListBinding
+
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,7 @@ class ListFragment : Fragment() {
 
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
+        mainViewModel.listTarefa()
 
 
         // Configuração do RecyclerView
@@ -36,11 +40,15 @@ class ListFragment : Fragment() {
 
 
         binding.floatingAdd.setOnClickListener {
-            // navController - controller de ações
-            // navigate - ir até algum destino
-            // destino
-            findNavController().navigate(R.id.action_listFragment_to_formFragment)
+           findNavController().navigate(R.id.action_listFragment_to_formFragment)
         }
+
+        mainViewModel.myTarefaResponse.observe(viewLifecycleOwner){
+            response -> if(response.body() != null){
+                adapter.setList(response.body()!!)
+            }
+        }
+
         return binding.root
     }
 

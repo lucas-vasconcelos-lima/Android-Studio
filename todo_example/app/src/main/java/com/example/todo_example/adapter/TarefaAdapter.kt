@@ -40,5 +40,4 @@ class TarefaAdapter : RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>(){
         // avisa o adapter que ocorreu uma alteração
         notifyDataSetChanged()
     }
-
 }
